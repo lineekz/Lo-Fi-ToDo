@@ -3,117 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Days Scroll</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            background: #f2eeeb;
-            margin: 0;
-            padding: 20px;
-        }
-
-        .days-wrapper {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .arrow {
-            flex: 0 0 auto;
-            padding: 10px 14px;
-            background: #dfd8cc;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 20px;
-            font-weight: bold;
-            user-select: none;
-            transition: background 0.2s;
-        }
-
-        .arrow:hover {
-            background: #cfc7ba;
-        }
-
-        .days-container {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            overflow-x: auto;
-            scrollbar-width: none;
-            /* Firefox */
-            -webkit-overflow-scrolling: touch;
-            /* плавный скролл */
-            padding-bottom: 10px;
-            scroll-behavior: smooth;
-            /* плавное перелистывание */
-        }
-
-        .days-container::-webkit-scrollbar {
-            display: none;
-            /* Chrome */
-        }
-
-        .day {
-            flex: 0 0 auto;
-            padding: 12px 18px;
-            background: #dfd8cc;
-            border-radius: 8px;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            min-width: 60px;
-        }
-
-        .day.active {
-            background: #fff;
-            border: 2px solid black;
-            font-weight: bold;
-        }
-    </style>
+    <title>Lo-Fi ToDo</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
-    <div class="days-wrapper">
-        <div class="arrow" id="left">&lt;</div>
-        <div class="days-container" id="days"></div>
-        <div class="arrow" id="right">&gt;</div>
+    <div class="main_container">
+        <button class="button" id="add_new">Add New</button>
     </div>
-
-    <script>
-        const container = document.getElementById("days");
-        const weekDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-
-        const today = new Date();
-
-        // генерируем 30 дней вперед
-        for (let i = 0; i < 30; i++) {
-            const date = new Date(today);
-            date.setDate(today.getDate() + i);
-
-            const dayName = weekDays[date.getDay()];
-            const div = document.createElement("div");
-            div.className = "day";
-            div.innerHTML = `${dayName}<br>${date.getDate()}`;
-
-            if (i === 0) div.classList.add("active");
-
-            div.addEventListener("click", () => {
-                document.querySelectorAll(".day").forEach(d => d.classList.remove("active"));
-                div.classList.add("active");
-            });
-
-            container.appendChild(div);
-        }
-
-        // стрелочки для пролистывания
-        document.getElementById("left").addEventListener("click", () => {
-            container.scrollBy({ left: -200, behavior: "smooth" });
-        });
-
-        document.getElementById("right").addEventListener("click", () => {
-            container.scrollBy({ left: 200, behavior: "smooth" });
-        });
-    </script>
 </body>
-
 </html>
