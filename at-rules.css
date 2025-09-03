@@ -1,0 +1,34 @@
+@font-face {
+    font-family: "Ubuntu";
+    src: url("fonts/Ubuntu-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Added bold weight for better button styling */
+@font-face {
+    font-family: "Ubuntu";
+    src: url("fonts/Ubuntu-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Added light weight for elegant header text */
+@font-face {
+    font-family: "Ubuntu";
+    src: url("fonts/Ubuntu-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+/* Entrance animation for the header text */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
