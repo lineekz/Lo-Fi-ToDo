@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Lo-Fi ToDo</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="at-rules.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/at-rules.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/days.css">
 </head>
 
 <body>
@@ -16,7 +18,12 @@
         <button class="button" id="add_new">Add New</button>
     </div>
     <div class="main_container">
-        
+        <div class="days_wrapper">
+            <div class="arrow" id="left">&lt;</div>
+            <div class="days_container" id="days"></div>
+            <div class="arrow" id="right">&gt;</div>    
+        </div>
+        <script src="days.js"></script>
     </div>
 </body>
 </html>

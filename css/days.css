@@ -1,0 +1,56 @@
+.days_wrapper {
+    margin-top: 20px;
+    width: 615px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.arrow {
+    flex: 0 0 auto;
+    padding: 10px 14px;
+    background: #dfd8cc;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    transition: background 0.2s;
+    user-select: none;
+
+}
+
+.arrow:hover {
+    background: #cfc7ba;
+}
+
+.days_container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 10px;
+    scroll-behavior: smooth;
+}
+
+.days_container::-webkit-scrollbar {
+    display: none;
+}
+
+.day {
+    flex: 0 0 auto;
+    padding: 12px 18px;
+    background: #dfd8cc;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 60px;
+}
+
+.day.active {
+    background: #fff;
+    border: 2px solid black;
+    font-weight: bold;
+}
