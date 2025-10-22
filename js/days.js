@@ -7,7 +7,6 @@ const today = new Date();
 for (let i = 0; i < 30; i++) {
     const date = new Date(today);
     date.setDate(today.getDate() + i);
-
     const dayName = weekDays[date.getDay()];
     const div = document.createElement("div");
     div.className = "day";
