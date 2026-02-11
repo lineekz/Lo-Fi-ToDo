@@ -3,7 +3,6 @@ const weekDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
 const today = new Date();
 
-    // генерируем 30 дней вперед
 for (let i = 0; i < 30; i++) {
     const date = new Date(today);
     date.setDate(today.getDate() + i);
@@ -22,7 +21,6 @@ for (let i = 0; i < 30; i++) {
     container.appendChild(div);
 }
 
-    // стрелочки для пролистывания
     document.getElementById("left").addEventListener("click", () => {
       container.scrollBy({ left: -520, behavior: "smooth" });
     });
